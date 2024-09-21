@@ -4,7 +4,7 @@
     <router-link to="/about">About</router-link>
   </nav>
   <h1 className="font-extrabold text-green-700 text-xl">
-    Commits Account fixed
+    Commits Account fixed?
   </h1>
   <router-view />
 </template>
