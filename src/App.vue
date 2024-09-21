@@ -3,7 +3,9 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <h1 className="font-extrabold text-green-700 text-xl">My First Vue App!</h1>
+  <h1 className="font-extrabold text-green-700 text-xl">
+    Commits Account fixed
+  </h1>
   <router-view />
 </template>
 
