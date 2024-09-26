@@ -1,21 +1,22 @@
 <template>
-  <section className=" bg-slate-500 shadow-2xl rounded-lg">
+  <div
+    class="post-container"
+    className="flex flex-wrap justify-center rounded-2xl gap-4"
+  >
     <PostCard />
     <PostCard />
     <PostCard />
     <PostCard />
-  </section>
+  </div>
 </template>
-<script>
+<script lang="ts" setup>
 import PostCard from "./PostCard.vue";
-import { defineComponent } from "vue";
-
-console.log(slotuiui);
-
-export default defineComponent({
-  name: "PostContainer",
-  props: {
-    slotuiui: String,
-  },
-});
 </script>
+
+<style scoped>
+.post-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>
