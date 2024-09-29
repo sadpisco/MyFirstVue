@@ -1,18 +1,6 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <h1 className="font-extrabold text-green-700 text-xl">
-    Commits Account fixed?
-  </h1>
-  <PostContainer />
   <router-view />
 </template>
-
-<script setup>
-import PostContainer from "./components/PostContainer.vue";
-</script>
 
 <style lang="scss">
 #app {

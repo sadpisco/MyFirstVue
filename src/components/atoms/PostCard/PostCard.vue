@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import PostButton from "./PostButton.vue";
+import PostButton from "@/components/atoms/PostButton/PostButton.vue";
 </script>
 
 <style scoped></style>

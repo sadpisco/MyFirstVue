@@ -1,16 +1,16 @@
 <template>
-  <div
+  <section
     class="post-container"
-    className="flex flex-wrap justify-center rounded-2xl gap-4"
+    className="flex flex-wrap justify-between rounded-2xl w-full max-w-screen-layout gap-12"
   >
     <PostCard />
     <PostCard />
     <PostCard />
     <PostCard />
-  </div>
+  </section>
 </template>
 <script lang="ts" setup>
-import PostCard from "./PostCard.vue";
+import PostCard from "@/components/atoms/PostCard/PostCard.vue";
 </script>
 
 <style scoped>
