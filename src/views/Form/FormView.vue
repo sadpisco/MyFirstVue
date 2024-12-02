@@ -1,6 +1,6 @@
 <template>
   <section
-    class="flex flex-col justify-center items-center w-full bg-slate-500 min-h-screen gap-8"
+    class="flex flex-col justify-center items-center w-full bg-slate-500 min-h-screen gap-2"
   >
     <VModelInput />
     <ListingItems />
