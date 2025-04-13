@@ -1,7 +1,7 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "@/views/Home";
-import AboutView from "@/views/About";
-import FormView from "@/views/Form";
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
+import HomeView from "@/views/Home"
+import AboutView from "@/views/About"
+import FormView from "@/views/Form"
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -22,11 +22,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "form",
     component: FormView,
   },
-];
+]
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-});
+})
 
-export default router;
+export default router

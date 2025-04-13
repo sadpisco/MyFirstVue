@@ -1,38 +1,47 @@
 module.exports = {
-  root: false,
+  root: true,
   env: {
-    node: false,
+    browser: true,
+    node: true,
+    es2021: true,
+  },
+  parser: "vue-eslint-parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    ecmaVersion: 2021,
+    sourceType: "module",
+    requireConfigFile: false,
   },
   extends: [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "@vue/typescript/recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier",
     "plugin:prettier/recommended",
   ],
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
+  plugins: ["@typescript-eslint", "prettier", "vue"],
+  // add your custom rules here
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    semi: "error",
-    "prefer-const": "error",
-    "prettier/prettier": [
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/migration-from-tailwind-2": "off",
+    "vue/comment-directive": "off",
+    "vue/no-v-html": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "no-new": "off",
+    "vue/multi-word-component-names": "off",
+    "prettier/prettier": ["error", {}, { usePrettierrc: true }],
+    "vue/html-self-closing": [
       "error",
       {
-        endOfLine: "auto", // Automatically handles line endings based on the system
+        html: {
+          void: "always",
+          normal: "never",
+          component: "always",
+        },
       },
     ],
+    "vue/script-setup-uses-vars": "error",
+    "vue/no-multiple-template-root": "off",
   },
-  overrides: [
-    {
-      files: [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)",
-      ],
-      env: {
-        jest: false,
-      },
-    },
-  ],
-};
+}

@@ -1,1 +1,1 @@
-export { default } from "./ListingItems.vue";
+export { default } from "./ListingItems.vue"

@@ -1,14 +1,17 @@
 <template>
-  <section
-    class="flex flex-col justify-center items-center w-full bg-slate-600 min-h-screen"
-  >
-    <img alt="Vue logo" src="../../assets/logo.png" className="self-center" />
+  <section class="flex min-h-screen w-full flex-col items-center justify-center bg-slate-600">
     <PostContainer />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </section>
 </template>
 
-<script lang="ts" setup>
-import HelloWorld from "@/components/atoms/HelloWorld/HelloWorld.vue";
-import PostContainer from "@/components/molecules/PostContainer/PostContainer.vue";
+<script lang="ts">
+  import PostContainer from "@/components/molecules/PostContainer"
+  import { defineComponent } from "vue"
+
+  export default defineComponent({
+    name: "HomePage",
+    components: {
+      PostContainer,
+    },
+  })
 </script>
